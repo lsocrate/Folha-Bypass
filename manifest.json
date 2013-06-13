@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Folha Bypass",
+  "description": "Bypass Folha content blocker",
+  "version": "0.1",
+  "offline_enabled": true,
+  "page_action": {},
+  "content_scripts": [
+    {
+      "matches": ["*://*.folha.uol.com.br/*"],
+      "js": ["bypass.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
