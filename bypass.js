@@ -7,9 +7,12 @@
     }
 
     var paywall = paywallImage.parentElement.parentElement
-    paywall.style.left = '-9999em'
+    paywall.style.zIndex = '-1'
+    paywall.querySelector(':first-child').style.background = "#fff"
     document.querySelector('body').style.cssText = "overflow: auto !important;"
+    document.querySelector('#aligner').style.background = "#fff"
   };
+
   var bypassEstado = function () {
     var wall = document.querySelectorAll('#pw-content,#pw-mask')
     if (!wall) {
